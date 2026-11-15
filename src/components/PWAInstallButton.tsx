@@ -103,12 +103,13 @@ export const OfflineIndicator: React.FC = () => {
   if (isOnline) return null;
 
   return (
-    <div
+    <span
       role="status"
-      className="fixed bottom-18 left-4 z-50 inline-flex items-center gap-2 rounded-xl border border-[#E8D1B2]/25 bg-[#2D1B12] px-3.5 py-2 text-xs font-medium text-[#E8D1B2] shadow-lg md:bottom-5"
+      aria-label="Offline"
+      title="Offline"
+      className="inline-flex items-center justify-center text-black shrink-0"
     >
-      <WifiOff className="h-3.5 w-3.5 text-[#E8D1B2]" aria-hidden="true" />
-      <span>Offline Mode — Local journal active</span>
-    </div>
+      <WifiOff className="h-4 w-4 text-black" aria-hidden="true" />
+    </span>
   );
 };

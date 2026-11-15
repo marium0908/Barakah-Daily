@@ -11,14 +11,6 @@ export default defineConfig(() => {
       tailwindcss(),
       VitePWA({
         registerType: 'autoUpdate',
-        includeAssets: [
-          'apple-touch-icon.png',
-          'pwa-192x192.png',
-          'pwa-512x512.png',
-          'pwa-maskable-512x512.png',
-          'assets/brand-logo.jpg',
-          'assets/sticker-accent.jpg',
-        ],
         manifest: {
           id: '/',
           name: 'Barakah Daily',

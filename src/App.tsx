@@ -604,7 +604,8 @@ export default function App() {
           </nav>
 
           {/* Zone 3: 1 Primary Action */}
-          <div className="shrink-0">
+          <div className="flex items-center gap-2.5 shrink-0">
+            <OfflineIndicator />
             {user ? (
               <button
                 type="button"
@@ -893,7 +894,6 @@ export default function App() {
         </div>
       </nav>
 
-      <OfflineIndicator />
     </div>
   );
 }

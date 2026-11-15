@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+  --espresso-canvas: #3A2419;
+  --espresso-deep: #28170F;
+  --mocha-card: #4E3222;
+  --cream-paper: #F6EAD7;
+  --cream-bright: #E8D1B2;
+  --kraft-paper: #E8D1B2;
+  --latte-tan: #C9A378;
+  --ink-espresso: #2D1B12;
+  --ink-muted: #6C4D3B;
+  --sage-good: #4A6A45;
+  --sage-soft: #E5EFE2;
+  --rose-slip: #9D4E42;
+  --rose-soft: #F6E4E0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--ink-espresso);
+  background-color: var(--espresso-canvas);
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(128, 82, 52, 0.28) 0%, transparent 48%),
+    radial-gradient(circle at 82% 85%, rgba(92, 56, 36, 0.25) 0%, transparent 45%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Die-cut sticker surfaces matching the coffee scrapbook aesthetic */
+.sticker-cream {
+  background-color: var(--cream-paper);
+  color: var(--ink-espresso);
+  border: 3px solid var(--cream-bright);
+  box-shadow:
+    0 10px 24px -6px rgba(18, 9, 4, 0.36),
+    0 3px 8px -2px rgba(18, 9, 4, 0.24);
+}
+
+.sticker-kraft {
+  background-color: var(--kraft-paper);
+  color: var(--ink-espresso);
+  border: 3px solid var(--cream-bright);
+  box-shadow:
+    0 10px 24px -6px rgba(18, 9, 4, 0.36),
+    0 3px 8px -2px rgba(18, 9, 4, 0.24);
+}
+
+.sticker-roast {
+  background-color: var(--mocha-card);
+  color: var(--cream-bright);
+  border: 3px solid var(--cream-bright);
+  box-shadow:
+    0 10px 24px -6px rgba(15, 7, 3, 0.45),
+    0 3px 8px -2px rgba(15, 7, 3, 0.3);
+}
+
+/* Subtle lined kraft notepad ruling for the Daily Goals & Muhasabah paper */
+.notepad-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 35px,
+    rgba(110, 79, 61, 0.14) 36px
+  );
+  background-position: 0 8px;
+}
+
+/* Washi tape decorative strip */
+.washi-tape {
+  background-color: rgba(196, 154, 108, 0.85);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255, 248, 238, 0.14) 0px,
+    rgba(255, 248, 238, 0.14) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  box-shadow: 0 2px 4px rgba(24, 13, 8, 0.18);
+}
+
+/* Die-cut sticker drop shadow for inline SVG illustrations */
+.sticker-cut-svg {
+  filter: drop-shadow(0 4px 6px rgba(18, 9, 4, 0.32));
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
